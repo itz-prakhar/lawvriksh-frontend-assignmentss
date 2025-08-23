@@ -1,18 +1,19 @@
 {
     "version": 2,
+    "projects": [],
     "builds": [
         {
             "src": "Phase2/package.json",
             "use": "@vercel/static-build",
             "config": {
-                "distDir": "dist"
+                "distDir": "Phase2/dist"
             }
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "Phase2/$1"
+            "dest": "Phase2/dist/$1"
         }
     ]
 }
